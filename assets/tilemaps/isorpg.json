@@ -85,11 +85,11 @@
         {
          "columns":8,
          "firstgid":1,
-         "image":"..\/..\/..\/..\/..\/..\/..\/Downloads\/floors_exterior_street_01.png",
+         "image":"..\/..\/..\/..\/..\/..\/..\/Downloads\/floors_exterior_tilesandstone_01.png",
          "imageheight":2048,
          "imagewidth":1024,
          "margin":0,
-         "name":"floors_exterior_street_01",
+         "name":"floors_exterior_tilesandstone_01",
          "spacing":0,
          "tilecount":160,
          "tileheight":256,
