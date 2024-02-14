@@ -4,10 +4,10 @@ class Example extends Phaser.Scene
 
     preload ()
     {
-        this.load.image('tiles2', 'quindao/assets/tilemaps/tiles/2x/floors_exterior_street_01.png');
-        this.load.image('tiles3', 'quindao/assets/tilemaps/tiles/2x/walls_commercial_03.png');
-        this.load.tilemapTiledJSON('map', 'quindao/assets/tilemaps/isorpg.json');
-        this.load.image('car', 'quindao/assets/tilemaps/tiles/2x/e_exterior_snow_1.png');
+        this.load.image('tiles2', 'images/tilemaps/tiles/2x/floors_exterior_street_01.png');
+        this.load.image('tiles3', 'images/tilemaps/tiles/2x/walls_commercial_03.png');
+        this.load.tilemapTiledJSON('map', 'images/tilemaps/isorpg.json');
+        this.load.image('car', 'images/tilemaps/tiles/2x/e_exterior_snow_1.png');
     }
 
     create ()
