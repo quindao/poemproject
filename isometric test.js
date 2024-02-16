@@ -67,9 +67,8 @@ class Example extends Phaser.Scene
         //this.playerskin = this.add.sprite(64, , 'car').setOrigin(.5,.25);
         //this.object1 = this.physics.add.sprite(64, 1024, 'playercollider')
         this.layer2 = this.map.createLayer('0_FloorOverlay3', [ tileset1, tileset2, tileset3, tileset4, tileset5, tileset6, tileset7, tileset8, tileset9, tileset10],);
-        this.player = this.physics.add.sprite(64, 1024, 'playercollider').setOrigin(.5,.25);
+
         const layer3 = this.map.createLayer('0_FloorOverlay4', [ tileset1, tileset2, tileset3, tileset4, tileset5, tileset6, tileset7, tileset8, tileset9, tileset10]);
-        this.player.body.onOverlap = true;
 
         this.object1overlay = this.add.sprite(953, 1447, 'objects1', 58).setOrigin(.5,.25); 
         this.object1overlay.scale = 1.1;
@@ -83,7 +82,7 @@ class Example extends Phaser.Scene
         this.object2overlay.setTintFill(0x00ff00);
         this.object2 = this.add.image(300, 1700, 'objects2', 20).setOrigin(.5,.25).setInteractive();
 
-
+        this.player = this.physics.add.sprite(64, 1024, 'playercollider').setOrigin(.5,.25);
         const layer5 = this.map.createLayer('indoor', [ tileset1, tileset2, tileset3, tileset4, tileset5, tileset6, tileset7, tileset8, tileset9, tileset10],);
         this.layer1.setCullPadding(8, 8)
         this.text1 = this.add.text(760, 1400, 'pots and pans left behind, just like these ruins', { fontFamily: 'Arial', fontSize: 24, color: '#888888' })
