@@ -77,25 +77,25 @@ class Example extends Phaser.Scene
         this.object1overlay.setTintFill(0x00ff00);
         this.object1 = this.add.image(950, 1450, 'objects1', 58).setOrigin(.5,.25).setInteractive();
 
-        this.object2overlay = this.add.sprite(300, 1700, 'objects2', 20).setOrigin(.5,.25); 
+        this.object2overlay = this.add.sprite(300, 1685, 'objects2', 20).setOrigin(.5,.25); 
         this.object2overlay.scale = 1.1;
         this.object2overlay.setTint(0x00ff00);
         this.object2overlay.setTintFill(0x00ff00);
         this.object2 = this.add.image(300, 1700, 'objects2', 20).setOrigin(.5,.25).setInteractive();
 
 
-        this.layer4 = this.map.createLayer('outside', [ tileset1, tileset2, tileset3, tileset4, tileset5, tileset6, tileset7, tileset8, tileset9, tileset10],);
         const layer5 = this.map.createLayer('indoor', [ tileset1, tileset2, tileset3, tileset4, tileset5, tileset6, tileset7, tileset8, tileset9, tileset10],);
         this.layer1.setCullPadding(8, 8)
-        this.text1 = this.add.text(750, 1400, 'pots and pans left behind, just like these ruins', { fontFamily: 'Arial', fontSize: 24, color: '#888888' })
+        this.text1 = this.add.text(760, 1400, 'pots and pans left behind, just like these ruins', { fontFamily: 'Arial', fontSize: 24, color: '#888888' })
         this.text1.alpha = 0;
-        this.text2 = this.add.text(200, 1700, 'a bear trap, I should be more careful', { fontFamily: 'Arial', fontSize: 24, color: '#888888' })
+        this.text2 = this.add.text(100, 1900, 'a bear trap, I should be more careful', { fontFamily: 'Arial', fontSize: 24, color: '#888888' })
         this.text2.alpha = 0;
         const text3 = this.add.text(750, 1400, 'pots and pans left behind, just like these ruins', { fontFamily: 'Arial', fontSize: 24, color: '#888888' })
         text3.alpha = 0;
         const text4 = this.add.text(750, 1400, 'pots and pans left behind, just like these ruins', { fontFamily: 'Arial', fontSize: 24, color: '#888888' })
         text4.alpha = 0;
         this.physics.add.collider(this.player, this.layer1);
+        this.layer4 = this.map.createLayer('outside', [ tileset1, tileset2, tileset3, tileset4, tileset5, tileset6, tileset7, tileset8, tileset9, tileset10],);
         this.layer2.setCullPadding(8, 8)
         layer3.setCullPadding(8, 8)
         this.layer4.setCullPadding(8, 8)
@@ -103,7 +103,7 @@ class Example extends Phaser.Scene
         layer6.setCullPadding(8, 8)
         this.layer7.setCullPadding(8, 8)
         this.cursors = this.input.keyboard.createCursorKeys();
-        this.cameras.main.setZoom(.5);
+        this.cameras.main.setZoom(.75);
 
         this.object1.once('pointerup', this.showtext1, this);
         this.object2.once('pointerup', this.showtext2, this);
@@ -153,6 +153,8 @@ class Example extends Phaser.Scene
             }
             else if (indoor.index !== 609)
             {
+                this.text1.alpha = 0;
+                this.text2.alpha = 0;
                 this.layer4.setCullPadding(8, 8)
             }
         if (this.cursors.left.isDown && indoor.index !== 1)
