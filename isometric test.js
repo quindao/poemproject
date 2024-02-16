@@ -89,7 +89,7 @@ class Example extends Phaser.Scene
         this.layer1.setCullPadding(8, 8)
         this.text1 = this.add.text(750, 1400, 'pots and pans left behind, just like these ruins', { fontFamily: 'Arial', fontSize: 24, color: '#888888' })
         this.text1.alpha = 0;
-        const text2 = this.add.text(200, 1700, 'a bear trap, I should be more careful', { fontFamily: 'Arial', fontSize: 24, color: '#888888' })
+        this.text2 = this.add.text(200, 1700, 'a bear trap, I should be more careful', { fontFamily: 'Arial', fontSize: 24, color: '#888888' })
         this.text2.alpha = 0;
         const text3 = this.add.text(750, 1400, 'pots and pans left behind, just like these ruins', { fontFamily: 'Arial', fontSize: 24, color: '#888888' })
         text3.alpha = 0;
