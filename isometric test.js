@@ -77,11 +77,11 @@ class Example extends Phaser.Scene
         this.object1overlay.setTintFill(0x00ff00);
         this.object1 = this.add.image(950, 1450, 'objects1', 58).setOrigin(.5,.25).setInteractive();
 
-        this.object2overlay = this.add.sprite(300, 1700, 'objects2', 21).setOrigin(.5,.25); 
+        this.object2overlay = this.add.sprite(300, 1700, 'objects2', 20).setOrigin(.5,.25); 
         this.object2overlay.scale = 1.1;
         this.object2overlay.setTint(0x00ff00);
         this.object2overlay.setTintFill(0x00ff00);
-        this.object2 = this.add.image(300, 1700, 'objects2', 21).setOrigin(.5,.25).setInteractive();
+        this.object2 = this.add.image(300, 1700, 'objects2', 20).setOrigin(.5,.25).setInteractive();
 
 
         this.layer4 = this.map.createLayer('outside', [ tileset1, tileset2, tileset3, tileset4, tileset5, tileset6, tileset7, tileset8, tileset9, tileset10],);
